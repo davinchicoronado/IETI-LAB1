@@ -10,7 +10,7 @@ public class User {
     private String name;
     private String email;
     private String lastName;
-    private String created;
+    private Date created;
 
     public User(UserDto userDto){
         this.name=userDto.getName();
@@ -34,7 +34,7 @@ public class User {
         return lastName;
     }
 
-    public String getCreated() {
+    public Date getCreated() {
         return created;
     }
 
@@ -54,7 +54,7 @@ public class User {
         this.lastName = lastName;
     }
 
-    public void setCreated(String created) {
+    public void setCreated(Date created) {
         this.created = created;
     }
 }

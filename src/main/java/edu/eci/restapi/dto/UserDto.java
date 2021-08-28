@@ -1,5 +1,7 @@
 package edu.eci.restapi.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class UserDto {
@@ -7,7 +9,8 @@ public class UserDto {
     private String name;
     private String lastName;
     private String email;
-    private String created;
+    @JsonFormat(pattern = "yyyy/MM/dd")
+    private Date created;
 
     public String getName() {
         return name;
@@ -21,7 +24,7 @@ public class UserDto {
         return email;
     }
 
-    public String getCreated() {
+    public Date getCreated() {
         return created;
     }
 
@@ -37,7 +40,7 @@ public class UserDto {
         this.email = email;
     }
 
-    public void setCreated(String created) {
+    public void setCreated(Date created) {
         this.created = created;
     }
 }
